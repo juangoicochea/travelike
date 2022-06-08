@@ -1,0 +1,52 @@
+.container ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+    position: absolute;
+    top: 33px;
+    left: 0;
+    width: 40%;
+    height: 20px;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #1d3557;
+    z-index: 800;
+    text-align: left;
+    line-height: 2em;
+
+    transition: 0.4s;
+}
+
+.mobile svg {
+    position: relative;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.mobile:hover {
+    height: 250px;
+}
+
+.mobile ul {
+    display: inline;
+    text-align: center;
+}
+
+@media screen and (max-width: 920px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+}

@@ -1,0 +1,55 @@
+.container {
+    width: calc(100% - 10px);
+    background-color: #1d3557;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 2px solid #457b9d;
+}
+
+.container span {
+    font-size: 3em;
+    font-weight: 800;
+    position: relative;
+    z-index: 999;
+}
+
+.container span:last-child {
+    font-size: 1.5em;
+}
+
+.mobileCol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 920px) {
+
+    .desktop {
+        display: none;
+    }
+    
+    .mobile {
+        display: block;
+    }
+
+    .container {
+        width: calc(100% - 60px);
+        padding: 5px 30px;
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .mobileCol {
+        justify-content: right;
+    }
+
+}

@@ -1,0 +1,125 @@
+.container {
+    text-align: center;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 450px;
+    background-image: url('../../assets/travelike-home-image.jpg');
+    background-size: cover;
+    background-position: 0% 6%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 2px grey;
+}
+
+.imgTitle {
+    width: 35%;
+    margin-right: 8%;
+    color: white;
+    font-size: 3em;
+    text-align: right;
+}
+
+.form {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.formItem {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.formItem input {
+    padding: 8px;
+    border: 2px solid #9a8c98;
+    border-radius: 3px;
+    font-size: 1.2em;
+}
+
+.formItem p {
+    margin-top: 0;
+}
+
+.formCols {
+    width: 88%;
+}
+
+.formCols:first-child {
+    padding-right: 4%;
+}
+
+.formCols:last-child {
+    padding-left: 4%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.507);
+}
+  
+.modalContent {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    width: 40%;
+    height: 200px;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #999;
+}
+
+@media screen and (max-width: 920px) {
+
+    .form form {
+        flex-direction: column;
+    }
+
+    .formCols:first-child {
+        padding-right: 0;
+    }
+    
+    .formCols:last-child {
+        padding-left: 0;
+    }
+
+    .formCols {
+        width: 100%;
+    }
+
+    .imgContainer {
+        justify-content: center;
+        background-position: center center;
+    }
+
+    .imgTitle {
+        width: 80%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+}
