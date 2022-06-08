@@ -114,33 +114,37 @@ const Home = () => {
                 <h2>Por favor diligencia el siguiente formulario:</h2>
                 <div className={styles.form}>
                     <form onSubmit={(e) => handleSubmit(e)}>
-                        <div className={styles.formCols}>
-                            <div className={styles.formItem}>
-                                <label>Nombre Completo: </label>
-                                <input type='text' value={input.name} name='name' placeholder='Jon Doe' onChange={(e) => handleChange(e)} onBlur={(e) => handleBlur(e)} />
-                                {errors.name && (<p>{errors.name}</p>)}
+                        <div className={styles.allForm}>
+                            <div className={styles.formCols}>
+                                <div className={styles.formItem}>
+                                    <label>Nombre Completo: </label>
+                                    <input type='text' value={input.name} name='name' placeholder='Jon Doe' onChange={(e) => handleChange(e)} onBlur={(e) => handleBlur(e)} />
+                                    {errors.name && (<p>{errors.name}</p>)}
+                                </div>
+                                <div className={styles.formItem}>
+                                    <label>Email: </label>
+                                    <input type='email' value={input.email} name='email' placeholder='tuemail@email.com' onChange={(e) => handleChange(e)} onBlur={(e) => handleBlur(e)} />
+                                    {errors.email && (<p>{errors.email}</p>)}
+                                </div>
                             </div>
-                            <div className={styles.formItem}>
-                                <label>Email: </label>
-                                <input type='email' value={input.email} name='email' placeholder='tuemail@email.com' onChange={(e) => handleChange(e)} onBlur={(e) => handleBlur(e)} />
-                                {errors.email && (<p>{errors.email}</p>)}
+                            <div className={styles.formCols}>
+                                <div className={styles.formItem}>
+                                    <label>Celular: </label>
+                                    <input type='number' value={input.phone} name='phone' placeholder='555 555 55 55' onChange={(e) => handleChange(e)} />
+                                    {errors.phone && (<p>{errors.phone}</p>)}
+                                </div>
+                                <div className={styles.formItem}>
+                                    <label>Edad: </label>
+                                    <input type='number' value={input.age} name='age' placeholder='31' onChange={(e) => handleChange(e)} onBlur={(e) => handleBlur(e)} />
+                                    {errors.age && (<p>{errors.age}</p>)}
+                                </div>
                             </div>
                         </div>
-                        <div className={styles.formCols}>
-                            <div className={styles.formItem}>
-                                <label>Celular: </label>
-                                <input type='number' value={input.phone} name='phone' placeholder='555 555 55 55' onChange={(e) => handleChange(e)} />
-                                {errors.phone && (<p>{errors.phone}</p>)}
-                            </div>
-                            <div className={styles.formItem}>
-                                <label>Edad: </label>
-                                <input type='number' value={input.age} name='age' placeholder='31' onChange={(e) => handleChange(e)} onBlur={(e) => handleBlur(e)} />
-                                {errors.age && (<p>{errors.age}</p>)}
-                            </div>
-                        </div>
+                        <div className={styles.formColButton}>
                         {Object.keys(errors).length === 0 && input.name.length >= 1 ?
                             <button type='submit' onClick={openModal}>Enviar</button> : null
                         }
+                        </div>
                     </form>
                 </div>
                 <Footer />
