@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styles from './Home.module.css'
 import Header from "../Header/Header"
 import Footer from '../Footer/Footer'
-import homeImage from '../../assets/travelike-home-image.jpg'
 
 function validate(input) {
     let errors = {}
